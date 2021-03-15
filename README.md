@@ -19,4 +19,4 @@ The issue of attendance is paramount for any teacher taking online classes. Ther
 
 This project follows the [MIT License](/LICENSE).
 
-<p align = "center"><em><b> Made with❤ </b><b>in India</b></em></p>
+<p align = "center"><em><b> Made with ❤ </b><b>in India</b></em></p>
