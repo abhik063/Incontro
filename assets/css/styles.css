@@ -5,3 +5,27 @@
   transform: translate(-50%, -50%);
   color: #d65829;
 }
+
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: rosybrown;
+  padding: 10%;
+  max-height: auto;
+  width: 55%;
+  margin-top: auto;
+  margin-bottom: auto;
+  overflow-y: auto;
+  border-radius: 2px;
+  will-change: top, opacity;
+  color: black;
+}
+
+element.style {
+  z-index: 1003;
+  display: block;
+  opacity: 1;
+  top: 10%;
+  transform: scaleX(1) scaleY(1);
+}
