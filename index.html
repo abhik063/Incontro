@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -13,53 +14,53 @@
 </head>
 
 <body class="grey lighten-3">
-  <!-- NAVBAR -->  
+  <!-- NAVBAR -->
   <nav class="z-depth-0 grey lighten-4">
     <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/img/Logopng.png" style="width: 180px; margin-top: 10px;">
-          </a>
-          <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navcol-1">
-            <ul id="nav-mobile" class="navbar-nav ml-auto right">
-              <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-              <li class="nav-item logged-out"><a class="nav-link" href="#">Notice</a></li>
-              <li class="nav-item logged-out"><a class="nav-link" href="#">Events</a></li>
-              <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-              <li class="nav-item logged-out" style="display: none;">
-                <a href="#" class="nav-link modal-trigger" data-target="modal-login">Login</a>
-              </li>
-              <li class="nav-item logged-out" style="display: none;">
-                <a href="#" class="nav-link modal-trigger" data-target="modal-signup">Sign up</a>
-              </li>
-              <li class="nav-item logged-in">
-                <a href="#" class="nav-link" id="logout">Logout</a>
-              </li>            
-              <li class="nav-item dropdown logged-in">
-                <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">Meeting</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href=" https://video-chat.basscord.co/abhi063">Join a Meeting</a>
-                  <a class="dropdown-item" href="#">Create a Meeting</a>
-                </div>
-              </li>
-            </ul>
-          </div>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/Logopng.png" style="width: 180px; margin-top: 10px;">
+        </a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul id="nav-mobile" class="navbar-nav ml-auto right">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item logged-out"><a class="nav-link" href="#">Notice</a></li>
+            <li class="nav-item logged-out"><a class="nav-link" href="#">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+            <li class="nav-item logged-out" style="display: none;">
+              <a href="#" class="nav-link modal-trigger" data-target="modal-login">Login</a>
+            </li>
+            <li class="nav-item logged-out" style="display: none;">
+              <a href="#" class="nav-link modal-trigger" data-target="modal-signup">Sign up</a>
+            </li>
+            <li class="nav-item logged-in">
+              <a href="#" class="nav-link" id="logout">Logout</a>
+            </li>
+            <li class="nav-item dropdown logged-in">
+              <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">Meeting</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="https://incontro.eastus.cloudapp.azure.com/">Join a Meeting</a>
+                <a class="dropdown-item" href="https://incontro.eastus.cloudapp.azure.com/">Create a Meeting</a>
+              </div>
+            </li>
+          </ul>
         </div>
-      </nav>    
+      </div>
+    </nav>
   </nav>
 
   <!-- SIGN UP MODAL -->
   <div id="modal-signup" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg" role="content">
-    <div class="modal-content">
+      <div class="modal-content">
         <h4>Sign up</h4><br />
         <form id="signup-form">
           <div class="input-field">
-            <label for="signup-email">Email address</label>  
+            <label for="signup-email">Email address</label>
             <input type="email" id="signup-email" required />
           </div>
           <div class="input-field">
@@ -68,31 +69,31 @@
           </div>
           <button class="btn yellow darken-2 z-depth-0">Sign up</button>
         </form>
-    </div>
+      </div>
     </div>
   </div>
 
   <!-- LOGIN MODAL -->
   <div id="modal-login" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg" role="content">
-    <div class="modal-content">
-      
+      <div class="modal-content">
+
         <!-- Modal Header -->
-      <h4>Login</h4><br />
+        <h4>Login</h4><br />
 
         <!-- Modal Body -->
-      <form id="login-form">
-        <div class="input-field">
-          <label for="login-email">Email address</label>
-          <input type="email" id="login-email" required />
-        </div>
-        <div class="input-field">
-          <label for="login-password">Your password</label>
-          <input type="password" id="login-password" required />
-        </div>
-        <button class="btn yellow darken-2 z-depth-0">Login</button>
-      </form>    
-    </div>
+        <form id="login-form">
+          <div class="input-field">
+            <label for="login-email">Email address</label>
+            <input type="email" id="login-email" required />
+          </div>
+          <div class="input-field">
+            <label for="login-password">Your password</label>
+            <input type="password" id="login-password" required />
+          </div>
+          <button class="btn yellow darken-2 z-depth-0">Login</button>
+        </form>
+      </div>
     </div>
   </div>
 
@@ -104,67 +105,67 @@
   <!--Carousel-->
   <div>
     <div class="carousel" data-ride="carousel" id="carousel-1">
-        <div class="carousel-inner">
-            <div class="carousel-item active" style="width: 100%;height: 30%;"><img class="img-fluid w-100 d-block"
-                    src="assets/img/Banner.svg.png" alt="Slide Image" style="width: 100%;height: 100%;">
-            </div>
-            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/shake-up-sales-meeting-og.jpg"
-                    alt="Slide Image"></div>
-            <div class="carousel-item"><img class="img-fluid w-100 d-block"
-                    src="assets/img/Teams-grphic-for-Facebook.jpg" alt="Slide Image"></div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="width: 100%;height: 30%;"><img class="img-fluid w-100 d-block"
+            src="assets/img/Banner.svg.png" alt="Slide Image" style="width: 100%;height: 100%;">
         </div>
-        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span
-                    class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a
-                class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><span
-                    class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-1" data-slide-to="1"></li>
-            <li data-target="#carousel-1" data-slide-to="2"></li>
-        </ol>
+        <div class="carousel-item"><img class="w-100 d-block" src="assets/img/shake-up-sales-meeting-og.jpg"
+            alt="Slide Image"></div>
+        <div class="carousel-item"><img class="img-fluid w-100 d-block" src="assets/img/Teams-grphic-for-Facebook.jpg"
+            alt="Slide Image"></div>
+      </div>
+      <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span
+            class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a
+          class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><span
+            class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-1" data-slide-to="1"></li>
+        <li data-target="#carousel-1" data-slide-to="2"></li>
+      </ol>
     </div>
   </div>
 
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyD6JsLx_qgje4-H-OF75xByPJ0gLZ7SG9M",
-        authDomain: "incontro-b84ee.firebaseapp.com",
-        projectId: "incontro-b84ee",
-        storageBucket: "incontro-b84ee.appspot.com",
-        messagingSenderId: "966643275541",
-        appId: "1:966643275541:web:e1f9a56e1ab9ffaa13bb1c"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    
-      // make auth and firestore references
-      const auth = firebase.auth();
-      const db = firebase.firestore();
-    
-      //update firestore settings
-      db.settings({ timestampsInSnapshots : true }); 
-    </script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyD6JsLx_qgje4-H-OF75xByPJ0gLZ7SG9M",
+      authDomain: "incontro-b84ee.firebaseapp.com",
+      projectId: "incontro-b84ee",
+      storageBucket: "incontro-b84ee.appspot.com",
+      messagingSenderId: "966643275541",
+      appId: "1:966643275541:web:e1f9a56e1ab9ffaa13bb1c"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
 
-    <script>
-      $(document).ready(function(){
-        $('#demo-carousel-auto').carousel();
-          setInterval(function() {
-            $('#demo-carousel-auto').carousel('next');
-        }, 1500);
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    //update firestore settings
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('#demo-carousel-auto').carousel();
+      setInterval(function () {
+        $('#demo-carousel-auto').carousel('next');
+      }, 1500);
     });
-    </script>
-  
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="scripts/auth.js"></script>
-    <script src="scripts/index.js"></script>  
-    
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  </script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/index.js"></script>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 
