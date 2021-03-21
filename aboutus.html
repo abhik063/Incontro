@@ -14,25 +14,44 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean">
-        <div class="container"><a class="navbar-brand" href="index.html">Incontro.</a><button data-toggle="collapse"
-                class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
-                    class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Notice</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="aboutus.html">About Us</a></li>
-                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false"
-                            data-toggle="dropdown" href="#">Meeting</a>
-                        <div class="dropdown-menu"><a class="dropdown-item"
-                                href=" https://video-chat.basscord.co/abhi063">Join a Meeting</a><a
-                                class="dropdown-item" href="#">Create a Meeting</a></div>
-                    </li>
-                </ul>
+    <nav class="z-depth-0 grey lighten-4">
+        <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/Logopng.png" style="width: 180px; margin-top: 10px;">
+                </a>
+                <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul id="nav-mobile" class="navbar-nav ml-auto right">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item logged-out"><a class="nav-link" href="#">Notice</a></li>
+                        <li class="nav-item logged-out"><a class="nav-link" href="#">Events</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="aboutus.html">About Us</a></li>
+                        <li class="nav-item logged-out" style="display: none;">
+                            <a href="#" class="nav-link modal-trigger" data-target="modal-login">Login</a>
+                        </li>
+                        <li class="nav-item logged-out" style="display: none;">
+                            <a href="#" class="nav-link modal-trigger" data-target="modal-signup">Sign up</a>
+                        </li>
+                        <li class="nav-item logged-in">
+                            <a href="#" class="nav-link" id="logout">Logout</a>
+                        </li>
+                        <li class="nav-item dropdown logged-in">
+                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown"
+                                href="#">Meeting</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href=" https://video-chat.basscord.co/abhi063">Join a
+                                    Meeting</a>
+                                <a class="dropdown-item" href="#">Create a Meeting</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </nav>
     </nav>
 
     <section class="boot mobile" style="margin-left: 10%; margin-right: 10%;">
@@ -82,17 +101,15 @@
                     <img class="img-fluid w-100 d-block" src="assets/img/about.png" alt="About Us Image"
                         style="float: right; height: 100%; width: 100%;">
                 </div>
-            
-                <div class="col-6 order-sm-2 order-md-1 mt-7"
-                    style="padding-top: 60px; width: 100%; height: 70%;">
+
+                <div class="col-6 order-sm-2 order-md-1 mt-7" style="padding-top: 60px; width: 100%; height: 70%;">
                     <h2 style="color: rgb(19, 97, 107);">Management Team</h2>
 
                     <div class="team-member headers">
 
                         <div class="row row-content align-items-center">
                             <div class="col-md-4 order-sm-first">
-                                <div class="photo" style="margin-top: 10%;"><img
-                                        src="./assets/img/Abhishek.png"
+                                <div class="photo" style="margin-top: 10%;"><img src="./assets/img/Abhishek.png"
                                         alt="Khushi Gujrati" style="border-radius:50%;float: left;width: 60%; height: 90%;
                                     border: 1px solid rgb(187, 182, 182)">
                                 </div>
@@ -107,8 +124,7 @@
 
                         <div class="row row-content align-items-center">
                             <div class="col-md-4 order-sm-last">
-                                <div class="photo" style="margin-top: 10%;"><img
-                                        src="./assets/img/Ankit.png"
+                                <div class="photo" style="margin-top: 10%;"><img src="./assets/img/Ankit.png"
                                         alt="Khushi Gujrati" style="border-radius:50%;float: left;width: 60%; height: 90%;
                                     border: 1px solid rgb(187, 182, 182)">
                                 </div>
