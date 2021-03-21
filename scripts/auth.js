@@ -21,13 +21,25 @@ signupForm.addEventListener('submit', (e) => {
   const email = signupForm['signup-email'].value;
   const password = signupForm['signup-password'].value;
 
+
   //sign up the user
   auth.createUserWithEmailAndPassword(email,password).then(cred => {
-    const modal = document.querySelector('modal-signup');
+    const modal = document.querySelector('#modal-signup');
     M.Modal.getInstance(modal).close();
     signupForm.reset();
+    window.location.href = "index.html";
+  }) .catch(function (error) {
+    var authError = error;
+    var errorCode = authError.code;
+    var errorMessage = authError.message;
+    if (errorMessage === "auth/weak-password") {
+        alert("The password is too weak.");
+    }
+    else {
+        alert(errorMessage);
+    }
+    console.log(error);
   });
-
 });
 
 //logout
@@ -51,6 +63,7 @@ loginForm.addEventListener('submit', (e) => {
     const modal=document.querySelector('#modal-login');
     M.Modal.getInstance(modal).close();
     loginForm.reset();
+    window.location.href = "index.html";
   }))
 })
 
