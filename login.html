@@ -14,7 +14,7 @@
 
 <body background="https://source.unsplash.com/collection/190727/1920x1080">
     <div class="login-card">
-        <strong>i</strong>
+        <strong>Incontro</strong>
         <img class="profile-img-card" src="assets/img/avatar_2x.png">
         <p class="profile-name-card"> </p>
         <form id="login-form" class="form-signin"><span class="reauth-email"> </span><input class="form-control" type="email"
@@ -29,26 +29,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyD6JsLx_qgje4-H-OF75xByPJ0gLZ7SG9M",
-        authDomain: "incontro-b84ee.firebaseapp.com",
-        projectId: "incontro-b84ee",
-        storageBucket: "incontro-b84ee.appspot.com",
-        messagingSenderId: "966643275541",
-        appId: "1:966643275541:web:e1f9a56e1ab9ffaa13bb1c"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    
-      // make auth and firestore references
-      const auth = firebase.auth();
-      const db = firebase.firestore();
-    
-      //update firestore settings
-      db.settings({ timestampsInSnapshots : true }); 
-    </script>
+   
     <script src="/scripts/auth.js"></script>
     <script src="/scripts/index.js"></script>
     <script src="assets/js/jquery.min.js"></script>

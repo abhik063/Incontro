@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
   <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/Google-Style-Login.css">
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
   <style>
     body {
       background-color: blanchedalmond;
@@ -34,8 +39,9 @@
       margin-left: auto;
       margin-right: auto;
       border-collapse: collapse;
-      width: 70%;
-      height: 100%;
+      width: 50%;
+      height: 70%;
+      font-size: large;
       border: 1px solid #bdc3c7;
       box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
       margin-bottom: 7%;
@@ -64,52 +70,110 @@
     }
 
     button{
-      width: 20%;
-      height: 5%;
+      width: 30%;
+      height: 10%;
       margin-bottom: 3px;
       background-color: #16a085;
     }
   </style>
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="z-depth-0 grey lighten-4 navbar-custom">
+  <nav class="z-depth-0 grey lighten-4">
     <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/img/Logopng.png" style="width: 180px; margin-top: 10px;">
-        </a>
-        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navcol-1">
-          <ul id="nav-mobile" class="navbar-nav ml-auto right">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-            <li class="nav-item logged-out"><a class="nav-link" href="#">Notice</a></li>
-            <li class="nav-item logged-out"><a class="nav-link" href="#">Events</a></li>
-            <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-            <li class="nav-item logged-out" style="display: none;">
-              <a href="#" class="nav-link modal-trigger" data-target="modal-login">Login</a>
-            </li>
-            <li class="nav-item logged-out" style="display: none;">
-              <a href="#" class="nav-link modal-trigger" data-target="modal-signup">Sign up</a>
-            </li>
-            <li class="nav-item logged-in">
-              <a href="#" class="nav-link" id="logout">Logout</a>
-            </li>
-            <li class="nav-item dropdown logged-in">
-              <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">Meeting</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="https://incontro.eastus.cloudapp.azure.com/">Join a Meeting</a>
-                <a class="dropdown-item" href="https://incontro.eastus.cloudapp.azure.com/">Create a Meeting</a>
-              </div>
-            </li>
-          </ul>
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/Logopng.png" style="width: 180px; margin-top: 10px;">
+            </a>
+            <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul id="nav-mobile" class="navbar-nav ml-auto right">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Notes</a></li>
+                    <li class="nav-item logged-out"><a class="nav-link" href="#">Notice</a></li>
+                    <li class="nav-item logged-out"><a class="nav-link" href="#">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                    <li class="nav-item logged-out" style="display: none;">
+                        <a href="#" class="nav-link modal-trigger" data-target="modal-login">Login</a>
+                    </li>
+                    <li class="nav-item logged-out" style="display: none;">
+                        <a href="#" class="nav-link modal-trigger" data-target="modal-signup">Sign up</a>
+                    </li>
+                    <li class="nav-item logged-in">
+                        <a href="#" class="nav-link" id="logout">Logout</a>
+                    </li>
+                    <li class="nav-item dropdown logged-in">
+                        <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown"
+                            href="#">Meeting</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href=" https://incontro.eastus.cloudapp.azure.com/">Join a
+                                Meeting</a>
+                            <a class="dropdown-item" href="https://incontro.eastus.cloudapp.azure.com/">Create a
+                                Meeting</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
-  </nav>
+</nav>
+<!-- SIGN UP MODAL -->
+<div id="modal-signup" class="modal fade" role="dialog">
+<div class="modal-dialog modal-lg" role="content">
+  <div class="modal-content">
+    <h4>Sign up</h4><br />
+    <form id="signup-form">
+      <div class="input-field">
+        <label for="signup-email">Email address</label>
+        <input type="email" id="signup-email" required />
+      </div>
+      <div class="input-field">
+        <label for="signup-password">Choose password</label>
+        <input type="password" id="signup-password" required />
+      </div>
+      <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+    </form>
+  </div>
+</div>
+</div>
+
+<!-- LOGIN MODAL -->
+<div id="modal-login" class="modal fade" role="dialog">
+  <!-- <div class="modal-dialog modal-lg" role="content">
+    <div class="modal-content">
+
+      <h4>Login</h4><br />
+
+      <form id="login-form">
+        <div class="input-field">
+          <label for="login-email">Email address</label>
+          <input type="email" id="login-email" required />
+        </div>
+        <div class="input-field">
+          <label for="login-password">Your password</label>
+          <input type="password" id="login-password" required />
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Login</button>
+      </form>
+    </div>
+  </div> -->
+
+  <div class="login-card">
+    <strong>Incontro</strong>
+    <img class="profile-img-card" src="assets/img/avatar_2x.png">
+    <p class="profile-name-card"> </p>
+    <form id="login-form" class="form-signin"><span class="reauth-email"> </span><input class="form-control" type="email"
+            id="login-email" required="" placeholder="Email address" autofocus=""><input class="form-control"
+            type="password" id="login-password" required="" placeholder="Password">
+        <div class="checkbox">
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label
+                    class="form-check-label" for="formCheck-1">Remember me</label></div>
+        </div><button class="btn btn-primary btn-block btn-lg btn-signin" type="submit">Sign in</button>
+    </form><a class="forgot-password" href="#">Forgot your password?</a>
+  </div>
+</div>
 
   <div>
     <h1> View / Download Notes Here!</h1>
@@ -117,29 +181,39 @@
   </div>
 
   <!-- Select Department -->
-  <div>
-    <h3>Select Department</h3>
-    <button id="cse_btn">CSE</button></br>
+  <div id="branch_div">
+    <h3>Choose Department</h3>
+    <button id="cse_btn">CSE</button>
     <button id="ece_btn">ECE</button></br>
-    <button>EEE</button></br>
+    <button>EEE</button>
     <button>MECH</button></br>
   </div>
 
   <!-- Select Semester -->
-  <div class="cse_sem" style="display: none;">
-    <button id="btn">SEMESTER 8</button></br>
+  <div id="cse_sem" style="display: none;">
+    <h3>Choose Semester</h3>
+    <button id="cse_sem8_btn">SEMESTER 8</button>
     <button>SEMESTER 7</button></br>
-    <button>SEMESTER 6</button></br>
+    <button>SEMESTER 6</button>
     <button>SEMESTER 5</button></br>
-    <button>SEMESTER 4</button></br>
+    <button>SEMESTER 4</button>
     <button>SEMESTER 3</button></br>
-    <button>SEMESTER 2</button></br>
+    <button>SEMESTER 2</button>
     <button>SEMESTER 1</button></br>
+  </div>
+
+  <!-- Select Subject -->
+  <div id="cse_sub" style="display: none;">
+    <h3>Choose Subject</h3>
+    <button id="cse_sub1_btn">17CS81</button>
+    <button id="cse_sub2_btn">17CS82</button></br>
+    <button>17CS83</button>
+    <button>17CS84</button></br>
   </div>
 
   </br>
   <!-- SYSTEM MODELING AND SIMULATION -->
-  <div>
+  <div id="cse_sms" style="display: none;" >
     <table class="table-custom">
       <tr id="header">
         <h3>SYSTEM MODELLING AND SIMULATION</h3>
@@ -199,13 +273,38 @@
   </div>
 
   <script type="text/javascript">
+
     $(document).ready(function () {
       $('#cse_btn').click(function () {
-        $('.cse_sem').show();
+        $('#cse_sem').show();
+        $('#branch_div').hide();
+        console.log("Working!")
+      });
+
+      $('#cse_sem8_btn').click(function () {
+        $('#cse_sub').show();
+        $('#cse_sem').hide();
+        console.log("Working!")
+      });
+
+      $('#cse_sub1_btn').click(function () {
+        $('#cse_sms').show();
+        $('#cse_sub').hide();
         console.log("Working!")
       });
     });
+    
 
   </script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/index.js"></script>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  
 </body>
 </html>

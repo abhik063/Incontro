@@ -1,19 +1,36 @@
-//listen for auth status changes
+var firebaseConfig = {
+  apiKey: "AIzaSyD6JsLx_qgje4-H-OF75xByPJ0gLZ7SG9M",
+  authDomain: "incontro-b84ee.firebaseapp.com",
+  projectId: "incontro-b84ee",
+  storageBucket: "incontro-b84ee.appspot.com",
+  messagingSenderId: "966643275541",
+  appId: "1:966643275541:web:e1f9a56e1ab9ffaa13bb1c"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// make auth and firestore references
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+//update firestore settings
+db.settings({ timestampsInSnapshots: true });
 auth.onAuthStateChanged(user => {
   if (user){
     //get data
     db.collection('guides').get().then(snapshot => {
-      setupGuides(snapshot.docs);
+     
       setupUI(user);
     });
   } else {
     setupUI();
-    setupGuides([]);
+    
   }
 });
 
 //signup
 const signupForm= document.querySelector('#signup-form');
+  
 signupForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
