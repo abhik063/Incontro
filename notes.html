@@ -1,0 +1,211 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Incontro - Notes</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+  <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    body {
+      background-color: blanchedalmond;
+      margin-top: 75px;
+      margin-left: 90px;
+      margin-right: 90px;
+    }
+
+    /* For device width 400px and larger: */
+    @media only screen and (min-device-width: 400px) {
+      body { 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('assets/img/bg_lib.jpg'); 
+      }
+    }
+
+    div {
+      text-align: center;
+    }
+
+    table {
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: collapse;
+      width: 70%;
+      height: 100%;
+      border: 1px solid #bdc3c7;
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 7%;
+    }
+    tr {
+      transition: all .2s ease-in;
+      cursor: pointer;
+    }
+        
+    th,
+    td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    #header {
+      background-color: #16a085;
+      color: #fff;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+      transform: scale(1.02);
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    button{
+      width: 20%;
+      height: 5%;
+      margin-bottom: 3px;
+      background-color: #16a085;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="z-depth-0 grey lighten-4 navbar-custom">
+    <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/Logopng.png" style="width: 180px; margin-top: 10px;">
+        </a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul id="nav-mobile" class="navbar-nav ml-auto right">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item logged-out"><a class="nav-link" href="#">Notice</a></li>
+            <li class="nav-item logged-out"><a class="nav-link" href="#">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+            <li class="nav-item logged-out" style="display: none;">
+              <a href="#" class="nav-link modal-trigger" data-target="modal-login">Login</a>
+            </li>
+            <li class="nav-item logged-out" style="display: none;">
+              <a href="#" class="nav-link modal-trigger" data-target="modal-signup">Sign up</a>
+            </li>
+            <li class="nav-item logged-in">
+              <a href="#" class="nav-link" id="logout">Logout</a>
+            </li>
+            <li class="nav-item dropdown logged-in">
+              <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">Meeting</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="https://incontro.eastus.cloudapp.azure.com/">Join a Meeting</a>
+                <a class="dropdown-item" href="https://incontro.eastus.cloudapp.azure.com/">Create a Meeting</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </nav>
+
+  <div>
+    <h1> View / Download Notes Here!</h1>
+    </br></br>
+  </div>
+
+  <!-- Select Department -->
+  <div>
+    <h3>Select Department</h3>
+    <button id="cse_btn">CSE</button></br>
+    <button id="ece_btn">ECE</button></br>
+    <button>EEE</button></br>
+    <button>MECH</button></br>
+  </div>
+
+  <!-- Select Semester -->
+  <div class="cse_sem" style="display: none;">
+    <button id="btn">SEMESTER 8</button></br>
+    <button>SEMESTER 7</button></br>
+    <button>SEMESTER 6</button></br>
+    <button>SEMESTER 5</button></br>
+    <button>SEMESTER 4</button></br>
+    <button>SEMESTER 3</button></br>
+    <button>SEMESTER 2</button></br>
+    <button>SEMESTER 1</button></br>
+  </div>
+
+  </br>
+  <!-- SYSTEM MODELING AND SIMULATION -->
+  <div>
+    <table class="table-custom">
+      <tr id="header">
+        <h3>SYSTEM MODELLING AND SIMULATION</h3>
+    </tr>
+      <tr id="header">
+        <th>Notes</th>
+        <th>Downloads</th>
+      </tr>
+      <tr>
+          <td>Module 1</td>
+          <td><a href="https://drive.google.com/open?id=13B3Nc7h_Ma6uEXbleA7lfd_CNoG68Nei"> View / Download </a></td>
+      </tr>
+      <tr>
+          <td>Module 2 (1st half) </td>
+          <td><a href="https://drive.google.com/open?id=1NIX_mfmKA8lDh1xJDS_x4xKMJnYjcJ7s"> View / Download </a></td>
+      </tr>
+      <tr>
+          <td>Module 2 (2nd half)</td>
+          <td><a href="https://drive.google.com/open?id=1xXcxVvxuS23zYesAeL64L0fRsNYIGjPO"> View / Download </a></td>
+      </tr>
+      <tr>
+          <td>Module 3 </td>
+          <td><a href="https://drive.google.com/open?id=1uaDqr4FbACFA5Si5yXEJy8re8keEZLJR"> View / Download </a></td>
+      </tr>
+      <tr>
+          <td>Module 4 </td>
+          <td><a href="https://drive.google.com/open?id=1I_C853UHzhsdnmPm5mhD1xTkHdZ0kyC7"> View / Download </a></td>
+      </tr>
+      <tr>
+          <td>Module 5 </td>
+          <td><a href="https://drive.google.com/open?id=1qwONFOTO0EauLPv20tz4YdOFgZCeJvjF"> View / Download </a></td>
+      </tr>
+      
+      <tr id="header">
+        <th>PPTS</th>
+        <th>Downloads</th>
+      </tr>
+      <tr>
+          <td>Module 1</td>
+          <td><a href="https://drive.google.com/open?id=1jVdguw2aBwMSOqmMRZmhRpZcn8PQeFI8"> View / Download </a></td>
+      </tr>
+      <tr>
+          <td>Module 2 </td>
+          <td><a href="https://drive.google.com/open?id=1IInCJlo4ukExqmQuiufOKpewZ1HwWhPo"> View / Download </a></td>
+      </tr>
+      
+      
+      <tr id="header">
+        <th>Vtu Question Papers</th>
+        <th>Downloads</th>
+      </tr>
+      <tr>
+          <td>  June-July 2019  </td>
+          <td><a href="#"> View / Download </a></td>
+      </tr>
+    </table>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#cse_btn').click(function () {
+        $('.cse_sem').show();
+        console.log("Working!")
+      });
+    });
+
+  </script>
+</body>
+</html>
