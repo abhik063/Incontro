@@ -64,6 +64,7 @@ const logout = document.querySelector('#logout');
 logout.addEventListener('click' , (e) => {
   e.preventDefault();
   auth.signOut();
+  window.location.href="index.html";
 });
 
 //login
@@ -80,7 +81,7 @@ loginForm.addEventListener('submit', (e) => {
     const modal=document.querySelector('#modal-login');
     M.Modal.getInstance(modal).close();
     loginForm.reset();
-    window.location.href = "index.html";
+    window.location.href = "meeting.html";
   }))
 })
 
